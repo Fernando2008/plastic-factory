@@ -1,0 +1,125 @@
+.production {
+  width: 100%;
+  height: auto;
+  padding-top: 4rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  color: #fff !important;
+  text-align: center;
+  /* border: 2px solid red; */
+
+  .production-left {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    gap: 3rem;
+    margin-top: 0.5rem;
+    /* border: 2px solid green; */
+
+    #bound-by-motion {
+      justify-self: start;
+      height: 100%;
+      /* width: 90% !important; */
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      /* border: 2px solid blue; */
+    }
+  }
+
+  .production-central {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    height: 100vh;
+    padding: 0;
+    gap: 0.5rem;
+    /* border: 2px solid red; */
+  }
+
+  .production-video {
+    width: auto !important;
+    height: auto;
+    /* border: 2px solid green; */
+
+    video {
+      height: auto;
+      width: 60% !important;
+      /* border: 2px solid red; */
+    }
+  }
+
+  .production-images {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* border: 2px solid blue; */
+
+    img {
+      cursor: pointer;
+      width: 9.5vw;
+      height: auto;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.025);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .production-left {
+    flex-direction: column !important;
+    gap: 0.25rem;
+
+    #bound-by-motion {
+      justify-self: unset !important;
+      height: 35vh !important;
+      width: auto !important;
+      /* border: 2px solid green; */
+    }
+
+    p {
+      font-size: 2vw !important;
+      font-weight: 400;
+      /* border: 2px solid red; */
+    }
+
+    .production-images {
+      gap: 3vw;
+    }
+
+    video {
+      height: 20vw !important;
+      width: auto !important;
+      /* border: 2px solid green; */
+    }
+
+    img {
+      width: 12vw !important;
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  video {
+    height: 30vw !important;
+  }
+}
